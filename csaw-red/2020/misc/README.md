@@ -4,11 +4,11 @@ author: kaiz
 
 # big world
 
-## Challenge
+### Challenge
 Someone took my gold and a secret book with the flag! Can you help me find it?  
 [world.zip](world.zip)
 
-## Solution
+### Solution
 world.zip is a Minecraft world folder. I used [NBTExplorer](https://github.com/jaquadro/NBTExplorer/releases), a Minecraft world editor to look inside it.
 ![](NBTExplorer.png)
 
@@ -18,5 +18,5 @@ The challenge discription mentions a secret book. All overworld chunk data in Mi
 It takes a while to search but inside the book, there is the flag.
 ![](flag.png)
 
-## Flag
+### Flag
 `flag{techno_vs_dream}`
