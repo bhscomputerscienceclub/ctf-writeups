@@ -4,9 +4,11 @@ The description of slack point says “Join our slack to form teams, hangout, an
 This seems to be one of the common types of problems in CTF, where the problem directs the users to some sort of communication platform in case they did not join yet, and also familiarizes new players with the flag finding process and flag input.
 The hint says “HEY SLACKER, WHY HAVEN'T YOU DONE THIS ALREADY?”, which isn’t very helpful.
 After joining the slack, we see:
+
 ![](slack1.png)
 
 The flag is likely hidden in one of the channels. Opening the first channel announcement shows the flag in a message at the top:
+
 ![](slack2.png)
 
 Inputting the flag into the problem gives us one point :)))
@@ -146,12 +148,15 @@ for config in configs: #in order to save on memory
 ## A broken image
 It looked like the image header had some bytes decapitated from the beginning of it. 
 Here is the structure of a PNG header:
+
 ![](examplehex.png)
 
 Using that structure, we repaired the header to this point:
+
 ![](hex.png)
 
 We then opened the image using the windows photos app (other apps will not open this) to see:
+
 ![](repaired.png)
 
 We tried to repair it further, but all our attempts failed, so we tried to guess the tea of the flag and each of the random letters on the end of the flag based on the partial letters that were in the image.\
@@ -211,7 +216,9 @@ Same process as past one, except keyword ciphers can’t have repeat letters (�
 
 # Web Exploitation
 ## Pekoemon
-When you click the button and look at the post request, its there
+When you click the button and look at the post request, the flag is there:
+
+![](request.png)
 
 ## Dogecoin to the moon
 When you decode the cookie you get
