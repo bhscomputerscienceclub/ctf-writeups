@@ -232,6 +232,12 @@ I tried a bunch of rovers that I found on the internet, and it turned out the ri
 ## Ceaser3.txt
 Same process as past one, except keyword ciphers can’t have repeat letters (“red planet” has two “e”s). I plugged it into the same website with a keyword of “redplant”, and the output seemed half-decipherable. From “lesr gp live io magr”, I realized that removing the e caused half of letters to be 1 off. The phrase also had to make sense and be related to Mars (as it did for the past Ceaser sequence), so I realized it was “lets go live in mars”
 
+## Super Secure Gcode?
+I used this tool to decode it into a normal gcode file: https://github.com/fritzw/cube-utils\
+When you open the gcode file with a text editor, the flag is there when you search it.
+
+## dictionary skills
+I slightly modified [this guy's code](https://codereview.stackexchange.com/questions/45650/dictionary-brute-force-on-des-encrypted-passwords) and used the rockyou dictionary with it to get the flag.
 
 # Web Exploitation
 ## Pekoemon
