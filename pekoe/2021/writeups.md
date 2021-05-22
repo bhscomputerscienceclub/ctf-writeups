@@ -261,7 +261,7 @@ Send a post request to it to get the flag
 Flag is in cookies
 
 ## eS Que eL
-Basic sql injection attack
+Basic sql injection attack\
 Put ' or 1=1# in the username and you get the flag
 
 ## Hello_World!
