@@ -1,8 +1,8 @@
 # General Skills
 ## The Slack Point
-The description of slack point says “Join our slack to form teams, hangout, and maybe even get some hints” and a link to https://join.slack.com/t/pekoectf2021/shared_invite/zt-oslt5t6r-j31rFL~b4ZHXPOnfZjEWlA
+The description of slack point says `Join our slack to form teams, hangout, and maybe even get some hints` and a link to https://join.slack.com/t/pekoectf2021/shared_invite/zt-oslt5t6r-j31rFL~b4ZHXPOnfZjEWlA
 This seems to be one of the common types of problems in CTF, where the problem directs the users to some sort of communication platform in case they did not join yet, and also familiarizes new players with the flag finding process and flag input.
-The hint says “HEY SLACKER, WHY HAVEN'T YOU DONE THIS ALREADY?”, which isn’t very helpful.
+The hint says `HEY SLACKER, WHY HAVEN'T YOU DONE THIS ALREADY?`, which isn’t very helpful.
 After joining the slack, we see:
 
 ![](slack1.png)
@@ -18,7 +18,7 @@ Binwalk it and you get the flag
 Binwalk it and you get the flag
 ## Not a Nintendo64
 The file contains 
-RGVhciBOZXBoZXcsIApJIHdpbGwgbm90IGdpdmUgeW91IGEgTmludGVuZG82NCwgaG93ZXZlciBJIHdpbGwgZ2l2ZSB5b3UgYSBmbGFnIGluIGJhc2U2NC4gCkhlcmUgaXQgaXM6IHBla29le2VhcmxfZ3JleV81NGQ1MjB9ClNpbmNlcmVseQpVbmNsZSBQZWtvZSAK
+`RGVhciBOZXBoZXcsIApJIHdpbGwgbm90IGdpdmUgeW91IGEgTmludGVuZG82NCwgaG93ZXZlciBJIHdpbGwgZ2l2ZSB5b3UgYSBmbGFnIGluIGJhc2U2NC4gCkhlcmUgaXQgaXM6IHBla29le2VhcmxfZ3JleV81NGQ1MjB9ClNpbmNlcmVseQpVbmNsZSBQZWtvZSAK`
 
 Converting from base64 to ASCII gives us the message:
 
@@ -49,9 +49,10 @@ def extract(fname):
         tar = tarfile.open(fname, "r:")
         tar.extractall()
         tar.close()
-```
+
 for i in range(500):
     extract(str(500-i) + ".tar.gz")
+```
 ## normal gcode
 Open the gcode file into http://jherrm.com/gcode-viewer/ to get the flag.
 
@@ -141,7 +142,7 @@ print(r)
 ```
 ## Sudo random? -2
 They give you the outputs of the random number generator and want you to guess the 3 seeds.
-I brute forced it by testing all the permutations of seeds in the generator and comparing the first output in the file they give to the first output of the script. If they matched, it was likely the flag since it is highly improbable that two different sets of seeds have the same generated value. I generated the combinations of permutations and then did it 6 times, rotating the numbers each time to save on memory because generating permutations would have taken over 50gb of memory. This took about 5 minutes to complete because this script is not optimised and made in python. This gave the flag of 720469842
+I brute forced it by testing all the permutations of seeds in the generator and comparing the first output in the file they give to the first output of the script. If they matched, it was likely the flag since it is highly improbable that two different sets of seeds have the same generated value. I generated the combinations of permutations and then did it 6 times, rotating the numbers each time to save on memory because generating permutations would have taken over 50gb of memory. This took about 5 minutes to complete because this script is not optimised and made in python. This gave the flag of `720469842`
 ```python
 import itertools
  
@@ -188,7 +189,7 @@ Some of our guessing strategies included:
 - This helped us determine that the two loops were “c”s
 - The two unknown characters were likely numbers, and based on the slant of the first one and the top and bottom of the second, we guessed that it was 4 and 1
 
-Putting the guesses together yielded “pekoe{oolong_c4c13a}”
+Putting the guesses together yielded `pekoe{oolong_c4c13a}`
 
 ## Where’s my backup?
 Binwalk it and inside the ext-root folder the flag is there
@@ -217,15 +218,17 @@ We used [Black Cat HF Weather Fax](https://www.blackcatsystems.com/software/hf_w
 # Crypto
 ## Ceaser0.txt
 Based on the title, it seems like a caesar cipher.
-The txt file contains “apvzp{nslxzxtwp_lqqnlom}”
-I plug it into https://cryptii.com/pipes/caesar-cipher and try all the shifts. It turns out that the shift is 11 and I get the plaintext of “pekoe{chamomile_affcadb}”
+The txt file contains `apvzp{nslxzxtwp_lqqnlom}`
+I plug it into https://cryptii.com/pipes/caesar-cipher and try all the shifts. It turns out that the shift is 11 and I get the plaintext of `pekoe{chamomile_affcadb}`
 
 ## Ceaser1.txt
 Again, the title says caesar cipher. The txt file contains the wrapper and “kmjb_lc_teb_bxnilpmtflk_plvbp” Doing the same process as Ceaser0 however, yielded no results. 
 It looked like a substitution cipher so I used https://www.dcode.fr/monoalphabetic-substitution, and pressed decrypt automatically, until I thought I could guess some words and found the alphabet manually.
 I ended with :
 
-and the flag was “pekoe{name_of_the_exploration_rover}”
+![](table.png)
+
+and the flag was `pekoe{name_of_the_exploration_rover}`
 
 ## Ceaser2.txt
 The hint says keyword, so I searched keyword cipher and got https://www.braingle.com/brainteasers/codes/keyword.php#form
@@ -249,8 +252,8 @@ When you click the button and look at the post request, the flag is there:
 
 ## Dogecoin to the moon
 When you decode the cookie you get
-{dogecoin-target: "$1"}
-Base64 encode {dogecoin-target: "moon"} and enter it in and the flag appears as a cookie
+`{dogecoin-target: "$1"}`
+Base64 encode `{dogecoin-target: "moon"}` and enter it in and the flag appears as a cookie
 
 ## Bitcoin is very volatile
 Notice that it sends a get request to https://pekoe-bitcoin-is-very-volatile.herokuapp.com/is-bitcoin-volatile 
@@ -261,8 +264,8 @@ Send a post request to it to get the flag
 Flag is in cookies
 
 ## eS Que eL
-Basic sql injection attack
-Put ' or 1=1# in the username and you get the flag
+Basic sql injection attack\
+Put `' or 1=1#` in the username or password and you get the flag
 
 ## Hello_World!
 The pieces of the flag are in the html, js, and css
