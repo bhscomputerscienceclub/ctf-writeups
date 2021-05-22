@@ -21,13 +21,13 @@ The file contains
 RGVhciBOZXBoZXcsIApJIHdpbGwgbm90IGdpdmUgeW91IGEgTmludGVuZG82NCwgaG93ZXZlciBJIHdpbGwgZ2l2ZSB5b3UgYSBmbGFnIGluIGJhc2U2NC4gCkhlcmUgaXQgaXM6IHBla29le2VhcmxfZ3JleV81NGQ1MjB9ClNpbmNlcmVseQpVbmNsZSBQZWtvZSAK
 
 Converting from base64 to ASCII gives us the message:
-```
+
 Dear Nephew, 
 I will not give you a Nintendo64, however I will give you a flag in base64. 
 Here it is: pekoe{earl_grey_54d520}
 Sincerely
 Uncle Pekoe 
-```
+
 ## Making hash browns?
 Hash the text using MD5.
 
