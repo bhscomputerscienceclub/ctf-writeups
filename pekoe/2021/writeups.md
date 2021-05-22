@@ -30,11 +30,28 @@ Uncle Pekoe
 ```
 ## Making hash browns?
 Hash the text using MD5.
-Rolling, rolling on a CTF
-Find the link that isn’t a rickroll with find and replace. Flag is in description.
-Tar and feather
 
+## Rolling, rolling on a CTF
+Find the link that isn’t a rickroll with find and replace. Flag is in description.
+
+## Tar and feather
+I extracted all of the tar.gz files with this script:
+```python
+import tarfile
+def extract(fname):
+    if fname.endswith("tar.gz"):
+        tar = tarfile.open(fname, "r:gz")
+        tar.extractall()
+        tar.close()
+    elif fname.endswith("tar"):
+        tar = tarfile.open(fname, "r:")
+        tar.extractall()
+        tar.close()
+```
+for i in range(500):
+    extract(str(500-i) + ".tar.gz")
 ## normal gcode
+Open the gcode file into http://jherrm.com/gcode-viewer/ to get the flag.
 
 ## The missing link
 Reverse image search the picture on Google, and the link pops up.
@@ -191,8 +208,10 @@ Binwalk it and the flag is in the assets folder
 ## Recovery Image Image Recovery
 Binwalk it and the flag is in _1833000.extracted/cpio-root/flag.png
 
-
-
+## Noise 2
+The audio seemed to be a fax image over radio.
+We used [Black Cat HF Weather Fax](https://www.blackcatsystems.com/software/hf_weather_fax.html) to get the flag:
+![](noise2.png)
 # Crypto
 ## Ceaser0.txt
 Based on the title, it seems like a caesar cipher.
