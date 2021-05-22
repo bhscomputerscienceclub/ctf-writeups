@@ -22,11 +22,13 @@ RGVhciBOZXBoZXcsIApJIHdpbGwgbm90IGdpdmUgeW91IGEgTmludGVuZG82NCwgaG93ZXZlciBJIHdp
 
 Converting from base64 to ASCII gives us the message:
 
+```
 Dear Nephew, 
 I will not give you a Nintendo64, however I will give you a flag in base64. 
 Here it is: pekoe{earl_grey_54d520}
 Sincerely
 Uncle Pekoe 
+```
 
 ## Making hash browns?
 Hash the text using MD5.
