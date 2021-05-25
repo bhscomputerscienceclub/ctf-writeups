@@ -245,6 +245,9 @@ When you open the gcode file with a text editor, the flag is there when you sear
 I slightly modified [this guy's code](https://codereview.stackexchange.com/questions/45650/dictionary-brute-force-on-des-encrypted-passwords) and used the rockyou dictionary with it to get the flag.
 
 # Web Exploitation
+## Hello World
+To solve this one you have to go into inspect element, and look at the website's source code. The first 3rd of the flag is in the HTML, the 2nd 3rd of the flag is in index.js, and the last 3rd of the flag is in index.css
+
 ## Pekoemon
 When you click the button and look at the post request, the flag is there:
 
