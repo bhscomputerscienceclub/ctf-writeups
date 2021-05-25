@@ -269,7 +269,3 @@ Flag is in cookies
 ## eS Que eL
 Basic sql injection attack\
 Put `' or 1=1#` in the username or password and you get the flag
-
-## Hello_World!
-The pieces of the flag are in the html, js, and css
-
